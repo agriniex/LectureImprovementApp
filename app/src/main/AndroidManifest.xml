@@ -10,13 +10,24 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_main"
+            android:label="Lekciju Grafiks"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".TrainingActivity"
+            android:label="Apmācība"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name=".FeedbackActivity"
+            android:label="Lekcijas novērtēšana"
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 

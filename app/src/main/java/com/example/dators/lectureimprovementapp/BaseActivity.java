@@ -1,5 +1,6 @@
 package com.example.dators.lectureimprovementapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -12,6 +13,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.RelativeLayout;
 
 
 public class BaseActivity extends AppCompatActivity
@@ -101,11 +103,14 @@ public class BaseActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_training) {
-
+            Intent intent = new Intent(this, TrainingActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_rate_lecture) {
-
+            Intent intent = new Intent(this, FeedbackActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_calendar) {
-
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
