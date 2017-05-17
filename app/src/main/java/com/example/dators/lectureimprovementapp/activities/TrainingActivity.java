@@ -1,11 +1,11 @@
-package com.example.dators.lectureimprovementapp;
+package com.example.dators.lectureimprovementapp.activities;
 
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RelativeLayout;
+
+import com.example.dators.lectureimprovementapp.R;
 
 
 public class TrainingActivity extends BaseActivity{
