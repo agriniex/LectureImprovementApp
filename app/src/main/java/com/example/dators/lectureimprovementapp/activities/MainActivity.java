@@ -1,5 +1,6 @@
 package com.example.dators.lectureimprovementapp.activities;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.view.View;
@@ -8,6 +9,7 @@ import android.widget.CalendarView;
 import android.widget.RelativeLayout;
 
 import com.example.dators.lectureimprovementapp.R;
+import com.example.dators.lectureimprovementapp.helpers.SQLiteHelper;
 
 public class MainActivity extends BaseActivity {
 
@@ -36,5 +38,11 @@ public class MainActivity extends BaseActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        SQLiteHelper sqh = new SQLiteHelper(this);
+
+        SQLiteDatabase sqdb = sqh.getReadableDatabase();
+
+
     }
 }

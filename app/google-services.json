@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "82971894773",
+    "firebase_url": "https://lecture-improvement-app.firebaseio.com",
+    "project_id": "lecture-improvement-app",
+    "storage_bucket": "lecture-improvement-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82971894773:android:74e4960e5e99796d",
+        "android_client_info": {
+          "package_name": "com.example.dators.lectureimprovementapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82971894773-0eaeq7fupkoq3ptlq3lfmcabk7enlr16.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3BE8eashKMGn1I-AQA__GG-ofMWMca0w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

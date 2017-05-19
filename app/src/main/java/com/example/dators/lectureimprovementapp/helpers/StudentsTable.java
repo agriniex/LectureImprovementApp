@@ -19,4 +19,10 @@ public class StudentsTable {
             + StudentsTable.COURSE + " INTEGER, "
             + StudentsTable.GROUP + " INTEGER"
             + ");";
+
+    public static final String DATA_INSERT_QUERY = "INSERT INTO " + TABLE_NAME + " (" +
+             UID + ", " + NAME + ", " + SURNAME + ", " + COURSE + ", " + GROUP + ") " +
+            "VALUES " +
+            "";
+
 }

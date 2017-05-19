@@ -3,7 +3,6 @@ package com.example.dators.lectureimprovementapp.helpers;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.support.design.widget.TabLayout;
 import android.util.Log;
 
 
@@ -13,7 +12,7 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     private static final int DATABASE_VERSION = 1;
 
 
-    SQLiteHelper(Context context) {
+    public SQLiteHelper(Context context) {
         super (context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
@@ -22,7 +21,6 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         db.execSQL(StudentsTable.TABLE_CREATE_QUERY);
         db.execSQL(CoursesTable.TABLE_CREATE_QUERY);
         db.execSQL(LecturersTable.TABLE_CREATE_QUERY);
-
     }
 
 
