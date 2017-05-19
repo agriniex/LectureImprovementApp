@@ -10,19 +10,15 @@
             android:id="@+id/nav_rate_lecture"
             android:icon="@drawable/ic_menu_send"
             android:title="Novērtēt lekciju" />
-        <item
-            android:id="@+id/nav_calendar"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Lekciju Grafiks" />
 
     </group>
 
-    <item android:title="">
+    <item android:title="Informācijas aplūkošana">
         <menu>
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/nav_received_feedback"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
+                android:title="Apskatīt Pasniedzēja novērtējumus" />
         </menu>
     </item>
 

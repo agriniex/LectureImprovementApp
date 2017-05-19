@@ -24,11 +24,6 @@
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
-        <activity
-            android:name=".activities.FeedbackActivity"
-            android:label="Lekcijas novērtēšana"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
     </application>
 
 </manifest>
