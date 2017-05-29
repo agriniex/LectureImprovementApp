@@ -14,11 +14,55 @@
     >
 
     <TextView
-        android:text="Training"
+        android:text="Ievadiet SQL vaicājumu:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:id="@+id/sveg" />
+        android:id="@+id/input_sql_label"
+        android:textSize="28sp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/input_sql"
+        android:maxLines="6"
+        android:layout_below="@+id/input_sql_label"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Pārbaudīt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/submit_button"
+        android:layout_below="@+id/input_sql"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Iegūtais puktu skaits: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/submit_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/points_label"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="Komentāri:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/points_label"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/details_label"
+        android:textSize="24sp" />
+
+
 </RelativeLayout>

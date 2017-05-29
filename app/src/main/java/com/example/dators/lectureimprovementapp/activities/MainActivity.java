@@ -9,10 +9,16 @@ import android.view.View;
 import android.widget.CalendarView;
 import android.widget.RelativeLayout;
 
+import com.example.dators.lectureimprovementapp.Course;
+import com.example.dators.lectureimprovementapp.Mark;
 import com.example.dators.lectureimprovementapp.R;
+import com.example.dators.lectureimprovementapp.Student;
+import com.example.dators.lectureimprovementapp.Studies;
 import com.example.dators.lectureimprovementapp.helpers.sqlite.SQLiteHelper;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.List;
 
 public class MainActivity extends BaseActivity {
 
@@ -22,10 +28,13 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        SQLiteHelper sqLiteHelper = new SQLiteHelper(getApplicationContext());
+        SQLiteHelper sqLiteHelper = new SQLiteHelper(this);
 
         SQLiteDatabase database = sqLiteHelper.getReadableDatabase();
-        Cursor cursor = database.rawQuery("SELECT * FROM studenti", null);
+        List<Student> students = sqLiteHelper.getAllStudentsData();
+        List<Course> courses = sqLiteHelper.getAllCursesData();
+        List<Studies> studies = sqLiteHelper.getAllStudiesData();
+        List<Mark> marks = sqLiteHelper.getAllMarksData();
 
         RelativeLayout contentLayout = (RelativeLayout) findViewById(R.id.app_content); //Remember this is the FrameLayout area within your activity_main.xml
         getLayoutInflater().inflate(R.layout.content_feedback, contentLayout);
@@ -38,12 +47,9 @@ public class MainActivity extends BaseActivity {
             }
         });
 
-//        SQLiteHelper sqh = new SQLiteHelper(this);
-
-//        SQLiteDatabase sqdb = sqh.getReadableDatabase();
-        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-        DatabaseReference myref = firebaseDatabase.getReference("lecture-improvement-app");
-        myref.setValue("Hello world");
+//        FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
+//        DatabaseReference myref = firebaseDatabase.getReference("lecture-improvement-app");
+//        myref.setValue("Hello world");
 
     }
 }

@@ -6,4 +6,13 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+    <string name="from_keyword_missing"> (Vaicājumā nav FROM atslēgas vārds) </string>
+    <string name="select_keyword_missing"> (Vaicājumā nav SELECT atslēgas vārds) </string>
+    <string name="query_empty"> Vaicājums ir tukšs. Lūdzu ievadiet vaicājumu. </string>
+    <string name="where_included">Vaicājumā tika iekļauta \'WHERE\' ierakstu filtrēšana</string>
+    <string name="query_successful">"Vaicājums tika izpildīts veiksmīgi"</string>
+    <string name="group_by_included">Vaicājumā tika iekļauta \'GROUP BY\' grupēšana</string>
+    <string name="table_does_not_exist">Tabula %1s "neeksistē. Lūdzu, pārbaudiet tabulas nosaukumu</string>
+    <string name="column_does_not_exist">Kolonna %1s "neeksistē. Lūdzu, pārbaudiet kolonnas nosaukumu</string>
+    <string name="syntax_error">Vaicājumā ir sintakses kļūda. Lūdzu, pārbaudiet vaicājumu netālu no \'%1s\' simbolu virknes</string>
 </resources>
