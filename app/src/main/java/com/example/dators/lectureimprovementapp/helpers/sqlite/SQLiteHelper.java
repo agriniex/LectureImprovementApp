@@ -1,4 +1,4 @@
-package com.example.dators.lectureimprovementapp.helpers;
+package com.example.dators.lectureimprovementapp.helpers.sqlite;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -20,7 +20,13 @@ public class SQLiteHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(StudentsTable.TABLE_CREATE_QUERY);
         db.execSQL(CoursesTable.TABLE_CREATE_QUERY);
-        db.execSQL(LecturersTable.TABLE_CREATE_QUERY);
+        db.execSQL(MarksTable.TABLE_CREATE_QUERY);
+        db.execSQL(StudiesTable.TABLE_CREATE_QUERY);
+
+        db.execSQL(StudentsTable.DATA_INSERT_QUERY);
+        db.execSQL(CoursesTable.DATA_INSERT_QUERY);
+        db.execSQL(MarksTable.DATA_INSERT_QUERY);
+        db.execSQL(StudiesTable.DATA_INSERT_QUERY);
     }
 
 
@@ -29,7 +35,8 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         Log.w("DATABASE", "Upgrading database from version " + oldVersion + " to " + newVersion);
         db.execSQL("DROP TABLE IF EXISTS " + CoursesTable.TABLE_NAME);
         db.execSQL("DROP TABLE IF EXISTS " + StudentsTable.TABLE_NAME);
-        db.execSQL("DROP TABLE IF EXISTS " + LecturersTable.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + MarksTable.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " + StudiesTable.TABLE_NAME);
         onCreate(db);
     }
 }

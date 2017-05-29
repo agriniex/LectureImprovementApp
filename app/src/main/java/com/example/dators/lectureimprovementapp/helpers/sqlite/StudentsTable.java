@@ -1,8 +1,5 @@
-package com.example.dators.lectureimprovementapp.helpers;
+package com.example.dators.lectureimprovementapp.helpers.sqlite;
 
-/**
- * Created by Dators on 2017.05.17..
- */
 
 public class StudentsTable {
     public static final String TABLE_NAME = "Studenti";
@@ -13,7 +10,7 @@ public class StudentsTable {
     public static final String GROUP = "grupa";
 
     public static final String TABLE_CREATE_QUERY = "CREATE TABLE " + StudentsTable.TABLE_NAME + " ( " + StudentsTable.UID +
-            "INTEGER PRIMARY KEY AUTOINCREMENT, "
+            " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + StudentsTable.NAME + " VARCHAR(255), "
             + StudentsTable.SURNAME + " VARCHAR(255), "
             + StudentsTable.COURSE + " INTEGER, "
@@ -21,8 +18,14 @@ public class StudentsTable {
             + ");";
 
     public static final String DATA_INSERT_QUERY = "INSERT INTO " + TABLE_NAME + " (" +
-             UID + ", " + NAME + ", " + SURNAME + ", " + COURSE + ", " + GROUP + ") " +
-            "VALUES " +
-            "";
+             NAME + ", " + SURNAME + ", " + COURSE + ", " + GROUP + ") " +
+            "VALUES ('Jānis', 'Koks', '1', '3')," +
+            " ('Juris', 'Pētersons', '1', '2')," +
+            " ('Zane', 'Bērziņa', '2', '1')," +
+            " ('Pēteris', 'Liepnieks', '1', '3')," +
+            " ('Viktors', 'Korpačovs', '1', '1')," +
+            " ('Didzis', 'Kuzmans', '2', '1')," +
+            " ('Kristīne', 'Zarina', '2', '2')" +
+            ";";
 
 }

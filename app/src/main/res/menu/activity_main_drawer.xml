@@ -17,7 +17,7 @@
         <menu>
             <item
                 android:id="@+id/nav_received_feedback"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/ic_menu_slideshow"
                 android:title="Apskatīt Pasniedzēja novērtējumus" />
         </menu>
     </item>
