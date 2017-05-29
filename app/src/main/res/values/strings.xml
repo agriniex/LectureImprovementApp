@@ -15,4 +15,6 @@
     <string name="table_does_not_exist">Tabula %1s "neeksistē. Lūdzu, pārbaudiet tabulas nosaukumu</string>
     <string name="column_does_not_exist">Kolonna %1s "neeksistē. Lūdzu, pārbaudiet kolonnas nosaukumu</string>
     <string name="syntax_error">Vaicājumā ir sintakses kļūda. Lūdzu, pārbaudiet vaicājumu netālu no \'%1s\' simbolu virknes</string>
+    <string name="feedback_label_info">Jūsu izteiktais komentārs būs anonīms, un tiks izmantots apmācības procesa uzlabošanā</string>
+    <string name="feedback_label">Izsakiet savu viedokli par apmācības procesu:</string>
 </resources>

@@ -110,7 +110,8 @@ public class BaseActivity extends AppCompatActivity
             Intent intent = new Intent(this, MainActivity.class);
             startActivity(intent);
         } else if (id == R.id.nav_received_feedback) {
-
+            Intent intent = new Intent(this, FeedbackResultsActivity.class);
+            startActivity(intent);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
