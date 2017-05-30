@@ -35,7 +35,6 @@ public class FirebaseHelper {
             public void onCancelled(DatabaseError databaseError) {
             }
         });
-        Collections.reverse(feedbackValues);
         return feedbackValues;
     }
 

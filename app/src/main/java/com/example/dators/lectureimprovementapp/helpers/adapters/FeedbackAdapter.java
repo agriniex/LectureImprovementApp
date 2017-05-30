@@ -18,9 +18,6 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Dators on 2017.05.30..
- */
 
 public class FeedbackAdapter extends ArrayAdapter<LectureRating> {
 
@@ -40,7 +37,7 @@ public class FeedbackAdapter extends ArrayAdapter<LectureRating> {
         TextView textView = (TextView) view.findViewById(R.id.feedback_item);
         TextView ratingDate = (TextView) view.findViewById(R.id.rating_date);
 
-        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy hh:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
         if (ratingItem != null) {
             if (ratingItem.getDetails() != null) {
                 textView.setText(ratingItem.getDetails());

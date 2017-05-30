@@ -18,7 +18,7 @@ public class FeedbackResultsActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        RelativeLayout contentLayout = (RelativeLayout) findViewById(R.id.app_content); //Remember this is the FrameLayout area within your activity_main.xml
+        RelativeLayout contentLayout = (RelativeLayout) findViewById(R.id.app_content);
         getLayoutInflater().inflate(R.layout.feedback_resuts, contentLayout);
 
         List<LectureRating> allFeedback = new FirebaseHelper().getAllFeedback();
