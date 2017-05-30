@@ -21,14 +21,15 @@
         <activity
             android:name=".activities.TrainingActivity"
             android:label="Apmācība"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".activities.FeedbackResultsActivity"
             android:label="Mācībspēka novertējumi"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".activities.ViewTablesActivity"
+            android:label="@string/title_activity_view_tables"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
