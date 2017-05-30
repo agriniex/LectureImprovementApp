@@ -76,15 +76,17 @@ public class BaseActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
 
+        Intent intent = null;
         if (id == R.id.nav_training) {
-            Intent intent = new Intent(this, TrainingActivity.class);
-            startActivity(intent);
+            intent = new Intent(this, TrainingActivity.class);
         } else if (id == R.id.nav_rate_lecture) {
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
+            intent = new Intent(this, MainActivity.class);;
         } else if (id == R.id.nav_received_feedback) {
-            Intent intent = new Intent(this, FeedbackResultsActivity.class);
+            intent = new Intent(this, FeedbackResultsActivity.class);
+        }
+        if (intent != null){
             startActivity(intent);
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
