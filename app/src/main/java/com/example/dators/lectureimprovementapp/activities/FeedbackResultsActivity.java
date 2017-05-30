@@ -6,6 +6,7 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 
 import com.example.dators.lectureimprovementapp.R;
+import com.example.dators.lectureimprovementapp.helpers.adapters.FeedbackAdapter;
 import com.example.dators.lectureimprovementapp.helpers.firebase.FirebaseHelper;
 
 import java.util.List;
@@ -21,7 +22,7 @@ public class FeedbackResultsActivity extends BaseActivity {
 
         List<String> allFeedback = new FirebaseHelper().getAllFeedback();
         ListView feedbackList = (ListView) findViewById(R.id.feedback_list);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, allFeedback);
+        ArrayAdapter<String> adapter = new FeedbackAdapter(this, allFeedback);
         feedbackList.setAdapter(adapter);
     }
 }
