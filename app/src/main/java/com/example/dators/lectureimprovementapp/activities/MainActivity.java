@@ -45,15 +45,5 @@ public class MainActivity extends BaseActivity {
         Button submitFeedbackButton = (Button) findViewById(R.id.submit_feedback_button);
         submitFeedbackButton.setOnClickListener(new SubmitFeedbackListener(this));
 
-        super.getFab().setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Monkeyd in Feedback", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-
-
-
     }
 }

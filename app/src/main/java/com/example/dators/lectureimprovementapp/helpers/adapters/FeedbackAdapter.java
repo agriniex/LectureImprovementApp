@@ -1,16 +1,20 @@
 package com.example.dators.lectureimprovementapp.helpers.adapters;
 
 import android.content.Context;
+import android.media.Rating;
 import android.support.annotation.NonNull;
 import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.example.dators.lectureimprovementapp.LectureRating;
 import com.example.dators.lectureimprovementapp.R;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,13 +22,10 @@ import java.util.List;
  * Created by Dators on 2017.05.30..
  */
 
-public class FeedbackAdapter extends ArrayAdapter<String> {
+public class FeedbackAdapter extends ArrayAdapter<LectureRating> {
 
-    List<String> feedback;
-
-    public FeedbackAdapter(Context context, List<String> items){
+    public FeedbackAdapter(Context context, List<LectureRating> items){
         super(context, R.layout.feedback_list_item, items);
-        feedback = items;
     }
 
     @NonNull
@@ -34,9 +35,23 @@ public class FeedbackAdapter extends ArrayAdapter<String> {
         LayoutInflater inflater = LayoutInflater.from(getContext());
         View view = inflater.inflate(R.layout.feedback_list_item, parent, false);
 
-        String feedbackItem = getItem(position);
+        LectureRating ratingItem = getItem(position);
+        RatingBar ratingBar = (RatingBar) view.findViewById(R.id.ratingBar);
         TextView textView = (TextView) view.findViewById(R.id.feedback_item);
-        textView.setText(feedbackItem);
+        TextView ratingDate = (TextView) view.findViewById(R.id.rating_date);
+
+        SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy hh:mm:ss");
+        if (ratingItem != null) {
+            if (ratingItem.getDetails() != null) {
+                textView.setText(ratingItem.getDetails());
+            }
+            if (ratingItem.getDetails() != null) {
+                ratingBar.setRating(ratingItem.getRating());
+            }
+            if (ratingItem.getDetails() != null) {
+                ratingDate.setText(sdf.format(ratingItem.getRatedDate()));
+            }
+        }
 
         return view;
     }

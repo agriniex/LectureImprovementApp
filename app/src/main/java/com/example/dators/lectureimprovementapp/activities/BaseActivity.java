@@ -21,7 +21,6 @@ public class BaseActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private Toolbar toolbar;
-    private FloatingActionButton fab;
 
     public Toolbar getToolbar() {
         return toolbar;
@@ -30,30 +29,12 @@ public class BaseActivity extends AppCompatActivity
     public void setToolbar(Toolbar toolbar) {
         this.toolbar = toolbar;
     }
-
-    public FloatingActionButton getFab() {
-        return fab;
-    }
-
-    public void setFab(FloatingActionButton fab) {
-        this.fab = fab;
-    }
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -77,7 +58,6 @@ public class BaseActivity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
@@ -91,6 +71,8 @@ public class BaseActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, ViewTablesActivity.class);
+            startActivity(intent);
             return true;
         }
 

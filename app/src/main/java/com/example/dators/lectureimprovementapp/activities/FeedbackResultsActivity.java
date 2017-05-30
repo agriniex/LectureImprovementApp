@@ -5,6 +5,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
+import com.example.dators.lectureimprovementapp.LectureRating;
 import com.example.dators.lectureimprovementapp.R;
 import com.example.dators.lectureimprovementapp.helpers.adapters.FeedbackAdapter;
 import com.example.dators.lectureimprovementapp.helpers.firebase.FirebaseHelper;
@@ -20,9 +21,9 @@ public class FeedbackResultsActivity extends BaseActivity {
         RelativeLayout contentLayout = (RelativeLayout) findViewById(R.id.app_content); //Remember this is the FrameLayout area within your activity_main.xml
         getLayoutInflater().inflate(R.layout.feedback_resuts, contentLayout);
 
-        List<String> allFeedback = new FirebaseHelper().getAllFeedback();
+        List<LectureRating> allFeedback = new FirebaseHelper().getAllFeedback();
         ListView feedbackList = (ListView) findViewById(R.id.feedback_list);
-        ArrayAdapter<String> adapter = new FeedbackAdapter(this, allFeedback);
+        ArrayAdapter<LectureRating> adapter = new FeedbackAdapter(this, allFeedback);
         feedbackList.setAdapter(adapter);
     }
 }

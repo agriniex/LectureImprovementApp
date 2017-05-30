@@ -16,20 +16,10 @@ public class TrainingActivity extends BaseActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        RelativeLayout contentLayout = (RelativeLayout) findViewById(R.id.app_content); //Remember this is the FrameLayout area within your activity_main.xml
+        RelativeLayout contentLayout = (RelativeLayout) findViewById(R.id.app_content);
         getLayoutInflater().inflate(R.layout.content_training, contentLayout);
 
         submitButton = (Button) findViewById(R.id.submit_button);
         submitButton.setOnClickListener(new SubmitQueryListener(this));
-
-//        RelativeLayout contentFrameLayout = (RelativeLayout) findViewById(R.id.content_main);
-//        getLayoutInflater().inflate(R.layout.activity_main, contentFrameLayout);
-        super.getFab().setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Monkeyd in training", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
     }
 }
