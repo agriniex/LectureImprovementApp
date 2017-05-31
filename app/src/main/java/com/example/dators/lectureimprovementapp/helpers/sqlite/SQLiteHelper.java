@@ -46,7 +46,6 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         db.execSQL(StudiesTable.DATA_INSERT_QUERY);
     }
 
-
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         Log.w("DATABASE", "Upgrading database from version " + oldVersion + " to " + newVersion);
@@ -140,10 +139,10 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
     public Feedback validateQuery(String query){
         List<Details> details = new ArrayList<>();
+        String lowerCaseQuery = query.toLowerCase();
         int points = 0;
         if (!query.equals("")) {
             try {
-                String lowerCaseQuery = query.toLowerCase();
                 Cursor cursor = getReadableDatabase().rawQuery(query, null);
                 details.add(new Details(context.getString(R.string.query_successful), true));
                 points += 1;
@@ -187,7 +186,6 @@ public class SQLiteHelper extends SQLiteOpenHelper {
 
             } catch (SQLException sqle) {
                 String message = sqle.getMessage();
-                String lowerCaseQuery = query.toLowerCase();
                 if (sqle.getMessage().contains("no such table:")) {
                     String comment = String.format(context.getString(R.string.table_does_not_exist),
                             message.substring(message.indexOf("table:") + 7, message.indexOf("(code 1)")-1));
