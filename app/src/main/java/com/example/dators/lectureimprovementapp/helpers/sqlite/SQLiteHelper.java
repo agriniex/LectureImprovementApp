@@ -130,8 +130,6 @@ public class SQLiteHelper extends SQLiteOpenHelper {
                     studies.setId(cursor.getInt(cursor.getColumnIndex(StudiesTable.UID)));
                     studies.setStudentId(cursor.getInt(cursor.getColumnIndex(StudiesTable.STUDENT_ID)));
                     studies.setCourseId(cursor.getInt(cursor.getColumnIndex(StudiesTable.COURSE_ID)));
-//                    studies.setStartDate(cursor.getString(cursor.getColumnIndex(StudiesTable.START_DATE)));
-//                    studies.setEndDate(cursor.getString(cursor.getColumnIndex(StudiesTable.END_DATE)));
                     studiesData.add(studies);
                 } while (cursor.moveToNext());
             }
@@ -146,17 +144,47 @@ public class SQLiteHelper extends SQLiteOpenHelper {
         if (!query.equals("")) {
             try {
                 String lowerCaseQuery = query.toLowerCase();
-                getReadableDatabase().rawQuery(query, null);
+                Cursor cursor = getReadableDatabase().rawQuery(query, null);
                 details.add(new Details(context.getString(R.string.query_successful), true));
                 points += 1;
-                if (lowerCaseQuery.contains("group by")) {
+                if (lowerCaseQuery.contains(" group by ")) {
                     details.add(new Details(context.getString(R.string.group_by_included), true));
                     points += 3;
                 }
-                if (lowerCaseQuery.contains("where")) {
+                if (lowerCaseQuery.contains(" order by ")) {
+                    details.add(new Details(context.getString(R.string.order_by_included), true));
+                    points += 3;
+                }
+                if (lowerCaseQuery.contains(" where ")) {
                     details.add(new Details(context.getString(R.string.where_included), true));
                     points += 1;
                 }
+
+                if (lowerCaseQuery.contains(" and ")) {
+                    details.add(new Details(context.getString(R.string.and_included), true));
+                    points += 1;
+                }
+
+                if (lowerCaseQuery.contains(" count(")) {
+                    details.add(new Details(context.getString(R.string.count_included), true));
+                    points += 1;
+                }
+
+                if (lowerCaseQuery.contains("having ")) {
+                    details.add(new Details(context.getString(R.string.having_included), true));
+                    points += 1;
+                }
+
+                 if (lowerCaseQuery.contains(" or ")) {
+                     details.add(new Details(context.getString(R.string.or_included), true));
+                     points += 1;
+                 }
+
+                if (!(cursor.moveToFirst()) || cursor.getCount() ==0){
+                    details.add(new Details(context.getString(R.string.no_value_returned), false));
+                    points -=1;
+                }
+
             } catch (SQLException sqle) {
                 String message = sqle.getMessage();
                 String lowerCaseQuery = query.toLowerCase();

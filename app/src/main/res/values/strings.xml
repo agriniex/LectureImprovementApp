@@ -10,8 +10,11 @@
     <string name="select_keyword_missing"> (Vaicājumā nav SELECT atslēgas vārds) </string>
     <string name="query_empty"> Vaicājums ir tukšs. Lūdzu ievadiet vaicājumu. </string>
     <string name="where_included">Vaicājumā tika iekļauta \'WHERE\' ierakstu filtrēšana</string>
+    <string name="and_included">Vaicājumā tika iekļauta ierakstu filtrēšana izmantojot \'AND\' operatoru</string>
+    <string name="or_included">Vaicājumā tika iekļauta ierakstu filtrēšana izmantojot \'OR\' operatoru</string>
     <string name="query_successful">"Vaicājums tika izpildīts veiksmīgi"</string>
     <string name="group_by_included">Vaicājumā tika iekļauta \'GROUP BY\' grupēšana</string>
+    <string name="order_by_included">Vaicājumā tika iekļauta \'ORDER BY\' datu sakārtošana</string>
     <string name="table_does_not_exist">Tabula %1s "neeksistē. Lūdzu, pārbaudiet tabulas nosaukumu</string>
     <string name="column_does_not_exist">Kolonna %1s "neeksistē. Lūdzu, pārbaudiet kolonnas nosaukumu</string>
     <string name="syntax_error">Vaicājumā ir sintakses kļūda. Lūdzu, pārbaudiet vaicājumu netālu no \'%1s\' simbolu virknes</string>
@@ -20,4 +23,7 @@
     <string name="view_tables">Aplūkot tabulas</string>
     <string name="title_activity_view_tables">Tabulas</string>
     <string name="section_format">Hello World from section: %1$d</string>
+    <string name="no_value_returned">Vaicājuma rezultāts ir tukšs. Lūdzu, pārbaudiet meklējamos datus</string>
+    <string name="count_included">Vaicājumā tika iekļauta \'COUNT\' funkcija</string>
+    <string name="having_included">Vaicājumā tika iekļauts \'HAVING\' operators</string>
 </resources>
