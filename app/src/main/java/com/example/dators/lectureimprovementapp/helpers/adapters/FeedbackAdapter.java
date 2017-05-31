@@ -1,9 +1,7 @@
 package com.example.dators.lectureimprovementapp.helpers.adapters;
 
 import android.content.Context;
-import android.media.Rating;
 import android.support.annotation.NonNull;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +13,6 @@ import com.example.dators.lectureimprovementapp.LectureRating;
 import com.example.dators.lectureimprovementapp.R;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.List;
 
 
